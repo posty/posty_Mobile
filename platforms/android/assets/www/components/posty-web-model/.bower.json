@@ -1,0 +1,16 @@
+{
+  "name": "posty-web-model",
+  "version": "1.0.4",
+  "main": "./posty-web-model.js",
+  "dependencies": {},
+  "homepage": "https://github.com/posty/posty_webModel",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.4",
+    "commit": "79955ae0a8b2c4ddabbe3a7010abf64947f1e808"
+  },
+  "_source": "git://github.com/posty/posty_webModel.git",
+  "_target": "~1.0.4",
+  "_originalSource": "posty-web-model"
+}

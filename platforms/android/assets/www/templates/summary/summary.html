@@ -1,0 +1,13 @@
+<ion-view title="API Keys" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">             
+		<h1 class="text-center"> <h1>
+        <h3 ng-show="isLoading()" class="text-center">        	
+            <i class="icon ion-loading-c"></i>
+        </h3> 
+        <div ng-show="!isLoading()">
+            <bars-chart class="ng-isolate-scope" chart-data="getData()"></bars-chart>
+        </div>      
+    </ion-content>
+
+</ion-view>

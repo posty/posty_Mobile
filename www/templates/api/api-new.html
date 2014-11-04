@@ -1,0 +1,37 @@
+<ion-view title="Create API" ng-init="init()">
+    <ion-content class="has-tabs has-header">
+
+        <div class="list">
+
+            <div class="list list-inset">
+
+                <a ng-show="isLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+                <div ng-show="!isLoading()">
+                    
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Caption:</span>
+                        <input type="text" placeholder="posty-api <<1>>" ng-model="api.caption">
+                    </div>                                     
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">URL:</span>
+                        <input type="text" placeholder="http://posty-api.com/api" ng-model="api.url">
+                    </div>  
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Key:</span>
+                        <input type="text" placeholder="12345" ng-model="api.key">
+                    </div>                                          
+
+                </div>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-dark" ng-disabled="!inputIsValid()" ng-click="save(api)" >Save</button>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

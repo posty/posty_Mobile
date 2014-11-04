@@ -1,0 +1,74 @@
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+
+.toggle-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 100px;
+  -moz-box-flex: 1;
+  -moz-flex: 1 0 100px;
+  -ms-flex: 1 0 100px;
+  flex: 1 0 100px;
+  margin: 0px 0px 0px -5px;
+  color: #444;
+  font-weight: bold;
+  font-size: 14px; 
+}
+
+/* 
+  Chart for the Summary 
+*/
+.chart {
+  padding: 3px;
+}
+.chart div {
+  width: 0;
+  height: 60;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+.chart div {
+  font: 14px sans-serif;
+  background-color: #9FC525;
+  text-align: right;
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+
+/* 
+  Notification-Boxes
+*/
+
+.toast-bottom-full-width {
+bottom: 60px; /* footer height + 16px */
+right: 0;
+width: 100%;
+}
+
+.toast {
+background-color: #030303;
+}
+.toast-success {
+background-color: #9FC525;
+}
+.toast-error {
+background-color: #bd362f;
+}
+.toast-info {
+background-color: #2f96b4;
+}
+.toast-wait {
+background-color: #2f96b4;
+}
+.toast-warning {
+background-color: #f89406;
+}

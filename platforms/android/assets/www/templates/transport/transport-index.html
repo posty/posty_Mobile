@@ -1,0 +1,20 @@
+<ion-view title="Domains" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">
+        <ion-refresher pulling-text="" on-refresh="doRefresh()" refreshing-icon="">
+        </ion-refresher>
+        <h3 ng-show="isLoading()" class="text-center">
+            <i class="icon ion-loading-c"></i>
+        </h3>
+        <ion-list>            
+            <ion-item ng-show="!isLoading()" ng-repeat="transport in getTransports() | filter:getHeaderSearchText():strict" class="item item-icon-right"
+                      ng-href="#/transport/{{transport.id}}">
+                <h2>{{transport.name}}</h2>
+                <p>{{transport.destination}}</p>        
+                <button class="button button-icon icon ion-trash-b" ng-click="remove(transport, $event)"></button>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

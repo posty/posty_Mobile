@@ -1,0 +1,54 @@
+<ion-view title="Create User" ng-init="init()">
+    <ion-content class="has-tabs has-header">
+
+        <form name="form">
+
+            <div class="list list-inset">
+
+                <a ng-show="isLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+                <div ng-show="!isLoading()">
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Domain:</span>
+                        <input name="domain" type="text" placeholder="posty-soft.org" readonly ng-model="domain.name">
+                    </div>
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Name:</span>
+                        <input name="name" type="text" placeholder="user" ng-model="user.name" ng-required="true">
+                    </div>            
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Password:</span>
+                        <i class="icon ion-checkmark password-icon" ng-show='form.password.$valid'></i>
+                        <input type="password" ng-required="true" name='password' id="password"
+                        ng-model="user.password" placeholder="password">
+                    </div>                   
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Confirm Password:</span>
+                        <i class="icon ion-checkmark password-icon" ng-show='form.confirmPassword.$valid'></i>
+                        <input type="password" ng-required="true" name="confirmPassword" id="confirmPassword"
+                        password-validator="password" ng-model="user.confirmPassword"
+                        placeholder="confirm password">
+                    </div> 
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Quta:</span>
+                        <input name="quota" type="number" placeholder="quota (MB)" ng-model="user.quota" ng-required="true">
+                    </div>                       
+
+                </div>
+            </div>
+
+            <div class="padding">
+                <button class="button button-block button-dark" ng-disabled='!form.$valid' ng-click="save(user)" >Save</button>
+            </div>
+
+        </form>
+
+    </ion-content>
+
+</ion-view>

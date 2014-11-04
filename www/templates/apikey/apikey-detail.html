@@ -1,0 +1,42 @@
+<ion-view title="{{transport.name}}" ng-init="init()">
+    <ion-content class="has-tabs has-header">
+
+        <div class="list">
+
+            <div class="list list-inset">
+
+                <a ng-show="isLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+                <div ng-show="!isLoading()">
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Access token:</span>
+                        <input type="text" placeholder="api-key" ng-model="apikey.access_token" readonly="true">
+                    </div>
+
+                    <div class="item item-input item-stacked-label">
+                        <span class="input-label">Expires at:</span>
+                        <input type="date" placeholder="1.1.2014" ng-model="apikey.expires_at">
+                    </div>
+
+                    <div class="item item-toggle item-stacked-label">
+                       <span class="toggle-label">Active:</span>
+                       <label class="toggle toggle-dark">
+                         <input checked="apikey.active" type="checkbox" ng-model="apikey.active">
+                         <div class="track">
+                           <div class="handle"></div>
+                         </div>
+                       </label>
+                    </div>                                       
+
+                </div>
+            </div>
+            <div class="padding">
+                <button class="button button-block button-dark" ng-disabled="!hasChanged()" ng-click="save(apikey)" >Save</button>
+            </div>
+        </div>
+
+    </ion-content>
+
+</ion-view>

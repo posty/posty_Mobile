@@ -1,0 +1,48 @@
+<div ng-controller="HeaderBarCtrl" ng-init="init()">
+
+    <div ng-include src="getTemplateName()"></div>
+
+</div>
+
+<!--    Search-Header-Bar     -->
+<script id="search-header.html" type="text/ng-template">
+
+    <ion-header-bar align-title="center" class="bar bar-header item-input-inset">
+        <div class="buttons">
+            <button class="button button-icon ion-android-arrow-back" ng-click="searchBackClick()"></button>
+        </div>
+        <label class="item-input-wrapper">            
+            <input type="search" placeholder="Searchtext" ng-model="data.searchText">
+        </label>
+        <div class="buttons">
+            <button class="button button-icon button ion-ios7-gear" ng-click="menuClick()">
+            </button>
+        </div>
+    </ion-header-bar>
+
+</script>
+
+<!--    Standard-Header-Bar     -->
+<script id="standard-header.html" type="text/ng-template">
+    <ion-header-bar align-title="center" class="bar bar-header">
+        <div class="buttons" ng-show="!backButtonIsHidden()">
+            <button class="button button-icon ion-android-arrow-back" ng-click="goBackClick()"></button>
+        </div>
+        <a href="#/home" class="button button-clear">
+            <img src="res/img/posty_logo.png" ng-show="!smallLogoIsSet()">
+            <img src="res/img/posty_logo_y.png" ng-show="smallLogoIsSet()">
+        </a>
+
+        <h1 class="title">{{getTitle()}}</h1>
+
+        <div class="buttons">
+            <button class="button button-icon button ion-search" ng-click="searchClick()" ng-show="!searchButtonIsHidden()">
+            </button>
+            <button class="button button-icon button ion-ios7-gear ion-plus-round" ng-click="newClick()" ng-show="!newButtonIsHidden()">
+            </button>
+            <button class="button button-icon button ion-ios7-gear" ng-click="menuClick()">
+            </button>
+        </div>
+    </ion-header-bar>
+</script>
+

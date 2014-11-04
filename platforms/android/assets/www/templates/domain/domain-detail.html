@@ -1,0 +1,51 @@
+<ion-view title="{{domainOld.name}}" ng-init="init()">
+    <ion-content class="has-tabs has-header">
+        <div class="list">
+
+            <div class="item item-divider">
+                General
+            </div>
+            <div class="list list-inset">
+
+                <div ng-show="!generalIsLoading()" class="item item-input-inset">
+                    <div class="item-input-wrapper">
+                        <input type="text" placeholder="Name" ng-model="domain.name">
+                    </div>
+                    <button ng-disabled="!domainInputIsValid()" class="button button-icon icon ion-plus-round"
+                            ng-click="saveDomain(domain)"></button>
+                </div>
+
+                <a ng-show="generalIsLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="item item-divider">
+            Alias
+        </div>
+        <div class="list list-inset" ng-show="!generalIsLoading()">
+
+            <div class="item item-input-inset">
+                <div class="item-input-wrapper">
+                    <input type="text" placeholder="New Alias" ng-model="alias.name">
+                </div>
+                <button ng-disabled="!aliasInputIsValid()" class="button button-icon icon ion-plus-round"
+                        ng-click="createAlias(alias)"></button>
+            </div>
+
+            <a ng-show="aliasIsLoading()" class="item item-icon text-center">
+                <i class="icon ion-loading-c"></i>
+            </a>
+            <a ng-show="!aliasIsLoading()" ng-repeat="alias in getAliasses()" class="item item-button-right">
+                {{alias.name}}
+                <button class="button button-icon icon ion-trash-b" ng-click="removeAlias(alias)"></button>
+            </a>
+        </div>
+
+
+
+    </ion-content>
+
+</ion-view>

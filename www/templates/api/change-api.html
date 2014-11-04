@@ -1,0 +1,22 @@
+<ion-view title="Change API" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">        
+        <h3 ng-show="isLoading()" class="text-center">
+            <i class="icon ion-loading-c"></i>
+        </h3>
+        <ion-list>            
+
+            <ion-item ng-show="!isLoading()" ng-repeat="server in getServers() | filter:getHeaderSearchText():strict" ng-click="selectServer(server)"class="item item-icon-right">
+                {{server.caption}}                            
+                <button class="button button-icon icon ion-checkmark" ng-show="server === currentServer" ></button>
+            </ion-item>
+
+        </ion-list>
+
+        <div class="padding">
+          <button class="button button-block button-dark" ng-disabled="!hasChanged()" ng-click="save()">Save</button>
+        </div>        
+
+    </ion-content>
+
+</ion-view>

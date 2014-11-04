@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>posty Mobile</title>
+
+    <link type="text/css" href="components/ionic/release/css/ionic.css" rel="stylesheet">
+    <link type="text/css" href="components/AngularJS-Toaster/toaster.css" rel="stylesheet">
+    <link type="text/css" href="css/index.css" rel="stylesheet">
+
+    <script src='cordova.js'></script>
+    <script data-main="js/main" src="lib/js/require.js"></script>
+</head>
+
+<body ng-controller="MainCtrl" ng-init="init()" animation="slide-left-right-ios7">
+
+<div ng-controller="NotificationCtrl" ng-init="init()">
+    <toaster-container toaster-options="{'position-class': 'toast-bottom-full-width'}"></toaster-container>
+</div>
+
+<ion-side-menus>
+
+    <ion-side-menu-content>
+
+        <div ng-include src="'templates/header-bar.html'"></div>
+
+        <ion-nav-view animation="slide-left-right"></ion-nav-view>
+
+        <div ng-include src="'templates/footer-bar.html'"></div>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right">
+        <ion-header-bar class="bar bar-header bar-dark">
+            <h1 class="title">Menu</h1>
+        </ion-header-bar>
+        <ion-content>
+            <ul class="list">
+                <li>
+                    <a class="item" menu-close href="#/change-api">ChangeAPI</a>                   
+                </li>                
+                <li>
+                    <a class="item" menu-close href="#/about">About</a>
+                </li>
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+
+</ion-side-menus>
+
+</body>
+</html>

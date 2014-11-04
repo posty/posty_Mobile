@@ -1,0 +1,23 @@
+<ion-view title="API Keys" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">        
+        <ion-refresher pulling-text="" on-refresh="doRefresh()" refreshing-icon="">
+        </ion-refresher>
+        <h3 ng-show="isLoading()" class="text-center">
+            <i class="icon ion-loading-c"></i>
+        </h3>        
+        <ion-list>
+            <ion-item class="item item-icon-left item-icon-right" ng-show="!isLoading()" ng-repeat="apikey in getApiKeys() | filter:getHeaderSearchText():strict" class="item item-icon-right"
+                      ng-href="#/apikey/{{apikey.id}}">
+                <i class="icon ion-alert-circled" ng-show="iconName(apikey)=='expired'"></i>
+                <i class="icon ion-minus-circled" ng-show="iconName(apikey)=='inactive'"></i>
+                <i class="icon ion-checkmark-circled" ng-show="iconName(apikey)=='ok'"></i>
+                <h2>{{apikey.access_token}}</h2>
+                <p>Expires at: {{apikey.expires_at | date:CONFIGS.DATE_FORMAT}}</p>                 
+                <button class="button button-icon icon ion-trash-b" ng-click="remove(apikey, $event)"></button>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

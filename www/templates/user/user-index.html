@@ -1,0 +1,19 @@
+<ion-view title="Domains" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">                  
+        <ion-refresher pulling-text="" on-refresh="doRefresh()" refreshing-icon="">
+        </ion-refresher>
+        <h3 ng-show="isLoading()" class="text-center">
+            <i class="icon ion-loading-c"></i>
+        </h3>
+        <ion-list>            
+            <ion-item ng-show="!isLoading()" ng-repeat="user in getUsers() | filter:getHeaderSearchText():strict" class="item item-icon-right"
+                      >
+                <h2>{{ user.name }}@{{ getDomain().name }}</h2>                       
+                <button class="button button-icon icon ion-trash-b" ng-click="remove(user, $event)"></button>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-view>

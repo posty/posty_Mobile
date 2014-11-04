@@ -1,0 +1,20 @@
+<ion-view title="API\'s" ng-init="init()">
+
+    <ion-content class="has-tabs has-header">        
+        <ion-refresher pulling-text="" on-refresh="doRefresh()" refreshing-icon="">
+        </ion-refresher>
+        <h3 ng-show="isLoading()" class="text-center">
+            <i class="icon ion-loading-c"></i>
+        </h3>        
+        <ion-list>
+            <ion-item class="item item-icon-right"                       
+                      ng-show="!isLoading()" 
+                      ng-repeat="api in getApiS() | filter:getHeaderSearchText():strict">                
+                <h2>{{api.caption}}</h2>
+                <p>{{api.url}}</p>                                            
+                <button class="button button-icon icon ion-trash-b" ng-disabled="!isItemEditable(api)" ng-click="remove(api, $event)"></button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    
+</ion-view>

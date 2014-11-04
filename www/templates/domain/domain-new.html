@@ -1,0 +1,47 @@
+<ion-view title="New Domain" ng-init="init()">
+    <ion-content class="has-tabs has-header">
+
+        <div class="list">
+
+            <div class="item item-divider">
+                General
+            </div>
+            <div class="list list-inset">
+                <div ng-show="!generalIsLoading()" class="item item-input item-stacked-label item-button-right">
+                    <label class="input-label">Name:</label>
+                    <input type="text" placeholder="name" ng-model="domain.name">
+                    <button ng-disabled="!domainInputIsValid()" class="button button-icon icon ion-checkmark-circled" ng-click="saveDomain(domain)"></button>
+                </div>
+
+                <a ng-show="generalIsLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+            </div>
+
+            <div class="item item-divider">
+                Alias
+            </div>
+            <div class="list list-inset" ng-show="!aliasIsShowed()">
+                <a class="item">
+                    Please enter a valid Domain-Name to create Aliasses
+                </a>
+            </div>
+            <div class="list list-inset" ng-show="aliasIsShowed()">
+                <a class="item item-input-left item-button-right">
+                    <input ng-model="alias.name" type="text" placeholder="New Alias">
+                    <button ng-disabled="!aliasInputIsValid()" class="button button-icon icon ion-plus-circled" ng-click="createAlias(alias)"></button>
+                </a>
+                <a ng-show="aliasIsLoading()" class="item item-icon text-center">
+                    <i class="icon ion-loading-c"></i>
+                </a>
+                <a ng-show="!aliasIsLoading()" ng-repeat="alias in getAliasses()" class="item item-button-right">
+                    {{alias.name}}
+                    <button class="button button-icon icon ion-minus-circled" ng-click="removeAlias(alias)"></button>
+                </a>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>

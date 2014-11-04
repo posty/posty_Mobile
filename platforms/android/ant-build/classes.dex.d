@@ -1,0 +1,19 @@
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes.dex : \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\BuildConfig.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\IonicRequireJSSeedApp.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\R$attr.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\R$drawable.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\R$string.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\R$xml.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\com\ionicframework\appname512931\R.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\BuildConfig.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\IonicRequireJSSeedApp.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\R$attr.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\R$drawable.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\R$string.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\R$xml.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\hu\dpal\starter\R.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen.class \
+D:\Entwicklung\postyMobile\posty_Mobile_v14\platforms\android\ant-build\dexedLibs\classes-c7e946b7de25c51bb2e1002b3157b087.jar \
